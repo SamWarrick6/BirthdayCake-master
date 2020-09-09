@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -62,7 +63,9 @@
                 android:id="@+id/seekBar2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="7dp" />
+                android:layout_margin="7dp"
+                android:max="5"
+                android:progress="2"/>
 
         </LinearLayout>
 
@@ -79,6 +82,7 @@
                 android:layout_margin="7dp"
                 android:layout_weight="1"
                 android:text="Frosting"
+                android:checked="true"
                  />
 
             <Switch
@@ -87,7 +91,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="7dp"
                 android:layout_weight="1"
-                android:text="Candles" />
+                android:text="Candles"
+                android:checked="true"/>
         </LinearLayout>
 
         <LinearLayout
@@ -102,15 +107,19 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="7dp"
                 android:layout_weight="1"
-                android:text="Blow Out" />
+                android:text="Blow Out"
+                />
 
             <Button
+                tools:ignore="OnClick"
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="7dp"
                 android:layout_weight="1"
-                android:text="Goodbye" />
+                android:text="Goodbye"
+                android:onClick="goodbye"
+                />
         </LinearLayout>
     </LinearLayout>
 

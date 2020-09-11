@@ -35,6 +35,9 @@ public class CakeView extends SurfaceView {
     public static final float outerFlameRadius = 30.0f;
     public static final float innerFlameRadius = 15.0f;
 
+    private CakeModel cakemodel;
+
+
 
 
     /**
@@ -62,6 +65,8 @@ public class CakeView extends SurfaceView {
         wickPaint.setStyle(Paint.Style.FILL);
 
         setBackgroundColor(Color.WHITE);  //better than black default
+        //create a CakeModel object
+        cakemodel = new CakeModel();
 
     }
 
@@ -98,6 +103,7 @@ public class CakeView extends SurfaceView {
     @Override
     public void onDraw(Canvas canvas)
     {
+
         //top and bottom are used to keep a running tally as we progress down the cake layers
         float top = cakeTop;
         float bottom = cakeTop + frostHeight;
@@ -127,6 +133,10 @@ public class CakeView extends SurfaceView {
         drawCandle(canvas, cakeLeft + cakeWidth/4 - candleWidth/2, cakeTop);
 
     }//onDraw
+    //return the cakemodel
+    public CakeModel getCakeModel() {
+        return cakemodel;
+    }
 
 
 
